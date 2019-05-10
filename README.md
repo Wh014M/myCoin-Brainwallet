@@ -1,10 +1,7 @@
 # myCoin-brainWallet
 ```
 Python3+
-```
 
-# 
-```
 "We only have what we give." - Isabel Allende
 
 Donate: BTC - 13vdSzghad1KWymvMDDPixN3ktdkZWaS7f
@@ -62,5 +59,5 @@ Donate: BTC - 13vdSzghad1KWymvMDDPixN3ktdkZWaS7f
  Coded by Adrijan Petek
 
 #
-#
+
 
