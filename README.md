@@ -11,7 +11,7 @@ Donate: BTC - 13vdSzghad1KWymvMDDPixN3ktdkZWaS7f
 # Usage:
 
 ```
-$ git https://github.com/adrijan111/myCoin-Bitcoin-Wallet-master.git
+$ git clone https://github.com/adrijano/myCoin-Brainwallet.git
 
 $ cd myCoin-Bitcoin-Wallet-master
 
