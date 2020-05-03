@@ -17,9 +17,6 @@ $ cd myCoin-Bitcoin-Wallet-master
 
 $ pyton myCoin.py
 
-```
-# Usage
-```
 Select: 1 Bitcoin wallet 
         2 Etherum wallet
         0 = Exit
