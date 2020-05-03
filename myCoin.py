@@ -32,10 +32,6 @@ def print_menu():
 |             \ V  V / (_| | | |  __/ |_               | 
 |              \_/\_/ \__,_|_|_|\___|\__|              | 
 |------------------------------------------------------|
-“We only have what we give.” - Isabel Allende
-
-Donate: BTC - 13vdSzghad1KWymvMDDPixN3ktdkZWaS7f
-        ETH - 0x2b6F5a72f7825bC5a2698681CE7a8c0da49AF75c
 
 Your wallet will be saved in txt file!
  1) Bitcoin Wallet
@@ -93,7 +89,6 @@ while loop:
         var = hashlib.sha256(binascii.unhexlify(hashlib.sha256(binascii.unhexlify(var80)).hexdigest())).hexdigest()
         WIF = str(base58.b58encode(binascii.unhexlify(str(var80) + str(var[0:8]))))
         file = open("Bitcoin Wallet.txt","a")
-        file.write("We only have what we give." + "- Isabel Allende" + "\n" + "Donate: BTC - 13vdSzghad1KWymvMDDPixN3ktdkZWaS7f" + "\n"+ "ETH - 0x2b6F5a72f7825bC5a2698681CE7a8c0da49AF75c"+"\n"+"\n"+"\n")
         file.write("Mnemonic: " + " " + str(phrase) + "\n" + "Privatekey: " + " " + str(privatekey) + "\n" + "Publickey: " + " " + str(publickey) + "\n" + "Address: " + " " + str(address) + "\n" + "WIF: " + str(WIF) + "\n" + "\n")
         file.close()
         print("Mnemonic:    " + " " + str(phrase) + "\n" + "Privatekey: " + " " + str(privatekey) + "\n" + "Publickey:  " + " " + str(publickey) + "\n" + "Address:    " + " " + str(address)+ "\n" + "WIF:         " + str(WIF) + "\n" + "\n")
@@ -107,7 +102,6 @@ while loop:
         checksum_address = blocksmith.EthereumWallet.checksum_address(address)
         print("Phrases:     " + str(phrase) + "\n" + "\n" + "Privatekey: " + " " + str(privatekey)+ "\n" + "Address:    " + " " + str(address)+ "\n" + "Checksum_a: "+ " " +str(checksum_address)+"\n"+"\n")
         file =  open("Ethereum Wallet.txt","a")
-        file.write("We only have what we give." + "- Isabel Allende" + "\n" + "Donate: BTC - 13vdSzghad1KWymvMDDPixN3ktdkZWaS7f" + "\n"+ "ETH - 0x2b6F5a72f7825bC5a2698681CE7a8c0da49AF75c"+"\n"+"\n"+"\n")
         file.write("Phrases: " + str(phrase) + "\n" + "Privatekey: " + " " + str(privatekey)+ "\n" + "Address:    " + " " + str(address)+ "\n" + "Checksum_a: "+ " " +str(checksum_address)+"\n"+"\n")
         file.close()
 
