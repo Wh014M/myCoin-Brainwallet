@@ -12,6 +12,10 @@
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=PFB6A6HLAQHC2&source=url)
 
+[!@[Bitcoin]
+(https://ibb.co/c3Qw7Sy.png)
+(https://commerce.coinbase.com/checkout/149a6235-ec7e-4d3b-a1ae-b08c4f08b4f6)
+
 # If you like it give it a star
 
 [![GitHub stars](https://img.shields.io/github/stars/adrijano/myCoin-Brainwallet.svg?style=social&label=Star&maxAge=2592000)](https://github.com/adrijano/myCoin-Brainwallet/)
