@@ -18,7 +18,7 @@ import blockcypher
 
 
 def sal():
-    return binascii.hexlify(os.urandom(8)).decode('utf-8')
+    return binascii.hexlify(os.urandom(512)).decode('utf-8')
 
 def seed(f, salt):
     p = f+ ' ' +salt
@@ -146,7 +146,7 @@ def main():
             overv = over(address)
             data = open("myCoin-Wallet.docx","a")
             data.write("myCoin-Wallet: "+"\n\n" +
-                       "Seed phrase: " +str(f)+' '+str(salt)+"\n\n"+
+                       "Seed phrase + salt: " +str(f)+' '+str(salt)+"\n\n"+
                        "Privatekey: " +str(secret_exponent)+"\n\n"+
                        "Publickey:  " + str(public_key)+"\n\n"+
                        "WIF:        " +str(WIF)+"\n\n"+
@@ -155,7 +155,7 @@ def main():
                        "Transactions:  " +str(overv)+"\n"+
                        '-------------------------------------------------------------------------------------------------------------'+"\n\n")
             data.close()
-            print("Seed phrase:  " +str(f)+ ' ' +str(salt)+"\n"+
+            print("Seed phrase + salt:  " +str(f)+ ' ' +str(salt)+"\n"+
                   "Privatekey:      " +str(secret_exponent)+"\n"+
                   "WIF:                " +str(WIF)+"\n"+
                   "Address:         "+str(address)+"\n"+
