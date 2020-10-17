@@ -117,8 +117,10 @@ def create_main_window(settings):
     right_click_menu = ['Unused', ['&Copy', '&Paste','Settings', 'E&xit']]
 
     layout =  [[sg.Menu(menu_def)],
-               [sg.Image('bit.png'), sg.Text('', size=(27,1)), sg.Button('', key='paypal', size=(12,1), button_color=(sg.theme_background_color(), sg.theme_background_color()),
-                                                    image_filename='paypal.png', image_size=(80, 50), image_subsample=2, border_width=0)],
+               [sg.Image('bit.png'), sg.Text('', size=(20,1)), sg.Button('', key='paypal', size=(12,1), font=('Helvetica', 9), button_color=(sg.theme_background_color(), sg.theme_background_color()),
+                           image_filename='paypal.png', image_size=(80, 50), image_subsample=2, border_width=0),
+                 sg.Button('', key='bitcoin', size=(12,1), font=('Helvetica', 9), button_color=(sg.theme_background_color(), sg.theme_background_color()),
+                           image_filename='bitcoin.png', image_size=(80, 60), image_subsample=2, border_width=0)],   
                [sg.Output(size=(76, 10), font=('Helvetica', 11), key='out')],
                [sg.Text('Enter seed phrase or to overview address:', font=('Helvetica', 8), size=(15,1))],
                [sg.Multiline(size=(76,3), font=('Helvetica', 11), key = 'gen')],
@@ -136,7 +138,10 @@ def main():
             window = create_main_window(settings)
         event, values = window.Read()
         f = values['gen'].rstrip()
-        if event == 'Generate wallet':
+        if event in (None, 'Exit'):
+            break
+
+        elif event == 'Generate wallet':
             salt = sal()
             secret_exponent = seed(f, salt)
             public_key = pub_key(secret_exponent)
@@ -187,11 +192,10 @@ def main():
         elif event == 'paypal':
             webbrowser.open_new_tab("https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=PFB6A6HLAQHC2&source=url")
         
+        elif event == 'bitcoin':
+            webbrowser.open_new_tab("https://commerce.coinbase.com/checkout/149a6235-ec7e-4d3b-a1ae-b08c4f08b4f6")
 
 
-
-        elif event in (None, 'Exit'):
-            break
 
     window.Close()    
 
