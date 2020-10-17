@@ -83,6 +83,14 @@ cd myCoin-Brainwallet && pip install -r requirements.txt
 
 python3 myCoin.py
 ```
+### Windows
+```
+cd dist
+
+myCoin.exe
+```
+
+
 ## Sample
 
 **myCoin-Wallet is saved in myCoin-Wallet.docx**
